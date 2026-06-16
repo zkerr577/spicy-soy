@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhp7r2nqk3v5t"]
+
+[ext_resource type="Script" path="res://hub/hub_portal.gd" id="1_portal"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_portal"]
+radius = 1.2
+
+[node name="HubPortal" type="Area3D"]
+script = ExtResource("1_portal")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_portal")
+
+[node name="Label3D" type="Label3D" parent="."]
+position = Vector3(0, 2.2, 0)
+pixel_size = 0.005
+text = "Portal"
+font_size = 64
+outline_size = 6
+billboard = 1
+
+[node name="PromptLabel3D" type="Label3D" parent="."]
+position = Vector3(0, 1.7, 0)
+pixel_size = 0.004
+text = "[F] Enter"
+font_size = 48
+outline_size = 4
+modulate = Color(0.8, 0.8, 0.8, 1)
+billboard = 1

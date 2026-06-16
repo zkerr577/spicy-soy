@@ -12,7 +12,12 @@ config_version=5
 
 config/name="Spicy Soy"
 config/features=PackedStringArray("4.3", "Forward Plus")
-run/main_scene="res://player/player.tscn"
+run/main_scene="res://levels/hub/hub.tscn"
+
+[autoload]
+
+GameManager="*res://game_manager/game_manager.gd"
+Transition="*res://game_manager/transition_layer.tscn"
 
 [input]
 
